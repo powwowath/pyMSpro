@@ -1,1 +1,31 @@
 # pyMSpro
+
+Main GIT commands:
+
+  _**git add [file]**_  to add files to the staging area.
+
+    example: git add .
+
+  _**git commit**_  to create a new commit from changes added to the staging area.
+
+    example: git commit -m "Added SQL Query to retrieve patients information"
+
+  _**git branch [new_branch]**_  to create a new branch
+
+    example: git branch notes_analysis
+
+  _**git branch**_  to list existing local branches
+
+    example: git branch notes_analysis
+
+  _**git checkout [-b][branch_name]**_  to switch working directory to the specified branch (with -b: git will create the specified branch if it doesn't exist)
+
+    example: git checkout -b microbiologic_analysis
+
+  _**git pull [remote]**_  to fetch changes from the remote and merge current branch with its upstream
+
+    example: git pull origin
+
+  _**git push [--tags] [remote] [branch]**_ to push local branch to remote repository
+
+    example: git push origin notes_analysis
