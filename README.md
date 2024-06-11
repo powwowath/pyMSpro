@@ -1,5 +1,20 @@
 # pyMSpro
 
+**Proteomics pipeline**
+* Peptide Identification
+* Protein inference
+* Protein Quantification
+* Data Normalization
+* Imputation
+* Batch correction
+* Statistical Analysis
+* Enrichment Analysis
+* Protein-Protein Interaction Analysis
+* Pseudotime Analysis
+* Visualization
+
+---
+
 Main GIT commands:
 
   _**git add [file]**_  to add files to the staging area.

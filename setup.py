@@ -13,12 +13,6 @@ setup(
     install_requires=[
         'numpy',
         'pandas',
-        'scipy',
-        'scikit-learn',
-        'matplotlib',
-        'seaborn',
-        'jupyter',
-        'biopython',
         'pyteomics',
     ],
     extras_require={
@@ -37,5 +31,5 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
     ],
-    python_requires='>=3.8',
+    python_requires='>=3.9',
 )
