@@ -2,3 +2,13 @@ numpy
 pandas
 pyteomics
 scipy
+scikit-learn
+matplotlib
+seaborn
+requests
+igraph
+Bio
+# requires brew install cairo pkg-config - https://pycairo.readthedocs.io/en/latest/getting_started.html
+pycairo
+cairocffi
+networkx
