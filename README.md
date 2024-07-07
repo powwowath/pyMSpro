@@ -7,12 +7,49 @@
 * Data Normalization
 * Imputation
 * Batch correction
-* Statistical Analysis
+* Statistical Analysis <----------------- Current focus
 * Enrichment Analysis
 * Protein-Protein Interaction Analysis
 * Pseudotime Analysis
 * Visualization
 
+
+
+
+
+ - Taula comparativa (per estudi)
+ - Use protein names from Uniprot
+ + PCA per cell cycle phase / cell type
+ + Plot amb el número de proteines que ens quedariem en funció del % de missing values que permetem
+ - Functional enrichement analysis (STringDB) -> Fold change (average per celltype) vs. p-value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ---
 
 Main GIT commands:
