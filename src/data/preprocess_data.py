@@ -63,7 +63,7 @@ def map_uniprot_ids_to_names(protein_ids):
     url = 'https://rest.uniprot.org/idmapping/run'
     params = {
         'from': 'UniProtKB_AC-ID',  # Input ID type
-        'to': 'UniProtKB',  # Output ID type
+        'to': 'UniProtKB-Swiss-Prot',  # Output ID type
         'ids': ','.join(protein_ids)  # List of protein IDs
     }
 
@@ -77,18 +77,22 @@ def map_uniprot_ids_to_names(protein_ids):
     # Check the status of the job until it is completed
     status_url = f'https://rest.uniprot.org/idmapping/status/{job_id}'
     ret_s = ""
-    while True:
+    ii = 0
+    while ii < 10:
         status_response = requests.get(status_url)
         status_response.raise_for_status()
         status_data = status_response.json()
-        ret_s = status_data
-        break
-        if 'jobStatus' in status_data and status_data['jobStatus'] == 'FINISHED':
-            break
+
+        #print("status_data:")
+        #print(status_data)
+        ii+=1
+        #if 'jobStatus' in status_data and status_data['jobStatus'] == 'FINISHED':
+        #    break
 
         time.sleep(3)  # Wait for 3 seconds before checking again
 
     # Get the results of the mapping job
+    print(f'https://rest.uniprot.org/idmapping/results/{job_id}')
     results_url = f'https://rest.uniprot.org/idmapping/results/{job_id}'
     results_response = requests.get(results_url)
     results_response.raise_for_status()
@@ -97,7 +101,7 @@ def map_uniprot_ids_to_names(protein_ids):
     # Extract the mappings from the results
     mapped_ids = [item['to'] for item in results_data['results']]
 
-    return mapped_ids, ret_s
+    return mapped_ids
 
 
 # Function to get protein names using UniProt IDs
