@@ -3,7 +3,7 @@ import logging
 
 
 # Class to interact with the string server
-class StringClient:
+class StringDBClient:
     def __init__(self, server_url="https://string-db.org/api", species=9606, score_threshold=400):
         self.server_url = server_url
         self.species = species
@@ -12,7 +12,7 @@ class StringClient:
         # log to a file
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
-        self.logger.addHandler(logging.FileHandler("string_client.log"))
+        self.logger.addHandler(logging.FileHandler("stringdb_client.log"))
 
     # Function to map proteins to STRING IDs
     def map_proteins(self, proteins, output_format):
