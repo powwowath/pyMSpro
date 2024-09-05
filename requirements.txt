@@ -17,4 +17,6 @@ pycombat==0.20
 
 
 scanpy[leiden]
+ipywidgets==8.1.3
+
 
