@@ -27,8 +27,8 @@ class UniprotClient:
             # Try to find the gene name in the JSON response
             try:
                 gene_name = data['genes'][0]['geneName']['value']
-                return gene_name + " (" + protein_id + ")"
-                #return gene_name
+                #return gene_name + " (" + protein_id + ")"
+                return gene_name
             except (IndexError, KeyError):
                 return "None (" + protein_id + ")"
                 #return "None_" + protein_id
