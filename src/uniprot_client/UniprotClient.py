@@ -33,7 +33,7 @@ class UniprotClient:
                 return "None (" + protein_id + ")"
                 #return "None_" + protein_id
         else:
-            print(f"Error fetching data for protein ID {protein_id}: {response.status_code}")
+            print(f"Error fetching data for protein ID {protein_id}: {response.status_code}. Returning 'None ("+protein_id+").")
             return None
 
     def batch_translate_protein_ids(self, protein_ids):
