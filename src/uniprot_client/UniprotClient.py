@@ -55,7 +55,6 @@ class UniprotClient:
         if response.status_code == 200:
             data = response.json()
 
-            # Try to find the gene name in the JSON response
             try:
                 gene_name = data['genes'][0]['geneName']['value']
                 return gene_name
