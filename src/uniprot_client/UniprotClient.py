@@ -65,7 +65,6 @@ class UniprotClient:
             print(f"Error fetching data in Uniparc for protein ID {protein_id}: {response.status_code}. Returning Null value.")
             return None
 
-
     def get_gene_name_from_unisave(self, protein_id):
         """
         Given a Unisave protein ID, fetch the corresponding gene name using the Unisave API.
@@ -111,6 +110,7 @@ class UniprotClient:
         else:
             print(f"Error fetching data in Unisave for protein ID {protein_id}: {response.status_code}. Returning Null value.")
             return None
+
     def batch_translate_protein_ids(self, protein_ids):
         """
         Given a list of UniProt protein IDs, fetch the corresponding gene names.
@@ -136,6 +136,6 @@ class UniprotClient:
 
 
 # Example usage:
-#protein_ids = ['P12345', 'Q8N158', 'P04637']
-#gene_names = batch_translate_protein_ids(protein_ids)
-#print(gene_names)
+# protein_ids = ['P12345', 'Q8N158', 'P04637']
+# gene_names = batch_translate_protein_ids(protein_ids)
+# print(gene_names)
