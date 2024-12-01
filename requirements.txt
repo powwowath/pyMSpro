@@ -20,5 +20,7 @@ scanpy[leiden]
 ipywidgets==8.1.3
 matplotlib-venn
 gseapy
+pyvis
+
 
 
