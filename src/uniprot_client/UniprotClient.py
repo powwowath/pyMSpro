@@ -3,10 +3,11 @@ import requests
 
 class UniprotClient:
     # init function
-    def __init__(self, server_url="https://rest.uniprot.org/uniprotkb/"):
+    def __init__(self, server_url="https://rest.uniprot.org/uniprotkb/", verbose=False):
         self.base_url = "https://rest.uniprot.org/uniprotkb/"
         self.base_uniparc_url = "https://rest.uniprot.org/uniparc/"
         self.base_unisave_url = "https://rest.uniprot.org/unisave/"
+        self.verbose = verbose
 
     def get_gene_name_from_uniprot(self, protein_id):
         """
@@ -31,10 +32,12 @@ class UniprotClient:
                 gene_name = data['genes'][0]['geneName']['value']
                 return gene_name
             except (IndexError, KeyError):
-                print(f"No data found in Uniprot for protein ID {protein_id}. Returning 'None (" + protein_id + ").")
-                return "None (" + protein_id + ")"
+                if self.verbose:
+                    print(f"No data found in Uniprot for protein ID {protein_id}. Returning 'None ({protein_id})'.")
+                return f"None ({protein_id})"
         else:
-            print(f"Error fetching data in UniProt for protein ID {protein_id}: {response.status_code}. Returning Null value.")
+            if self.verbose:
+                print(f"Error fetching data in UniProt for protein ID {protein_id}: {response.status_code}. Returning Null value.")
             return None
 
     def get_gene_name_from_uniparc(self, protein_id):
@@ -59,10 +62,12 @@ class UniprotClient:
                 gene_name = data['genes'][0]['geneName']['value']
                 return gene_name
             except (IndexError, KeyError):
-                print(f"No data found in Uniparc for protein ID {protein_id}. Returning 'None (" + protein_id + ").")
-                return "None (" + protein_id + ")"
+                if self.verbose:
+                    print(f"No data found in Uniparc for protein ID {protein_id}. Returning 'None ({protein_id})'.")
+                return f"None ({protein_id})"
         else:
-            print(f"Error fetching data in Uniparc for protein ID {protein_id}: {response.status_code}. Returning Null value.")
+            if self.verbose:
+                print(f"Error fetching data in Uniparc for protein ID {protein_id}: {response.status_code}. Returning Null value.")
             return None
 
     def get_gene_name_from_unisave(self, protein_id):
@@ -101,14 +106,17 @@ class UniprotClient:
                         found = True
                     index += 1
 
-                print(f"Gene name found in Unisave: {gene_name}.")
+                if self.verbose:
+                    print(f"Gene name found in Unisave: {gene_name}.")
 
                 return gene_name
             except (IndexError, KeyError):
-                print(f"No data found in Unisave for protein ID {protein_id}. Returning 'None (" + protein_id + ")'.")
-                return "None (" + protein_id + ")"
+                if self.verbose:
+                    print(f"No data found in Unisave for protein ID {protein_id}. Returning 'None ({protein_id})'.")
+                return f"None ({protein_id})"
         else:
-            print(f"Error fetching data in Unisave for protein ID {protein_id}: {response.status_code}. Returning Null value.")
+            if self.verbose:
+                print(f"Error fetching data in Unisave for protein ID {protein_id}: {response.status_code}. Returning Null value.")
             return None
 
     def batch_translate_protein_ids(self, protein_ids):
@@ -133,7 +141,6 @@ class UniprotClient:
 
             result[protein_id] = gene_name
         return result
-
 
 # Example usage:
 # protein_ids = ['P12345', 'Q8N158', 'P04637']
