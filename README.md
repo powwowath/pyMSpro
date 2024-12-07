@@ -26,8 +26,8 @@ The following datasets were analyzed in this project:
 The repository is structured as follows:
 
 - **/src**: Contains custom Python tools and modules developed for data analysis.
-- **/notebooks**: Jupyter Notebooks with the data analysis and visualizations.
-- **/data**: Processed data files used in the analysis (not included due to size; see below for details on accessing raw data).
+- **/results**: Generated HTML files with the results of the network analysis.
+- **/data**: Contains the datasets used in the analysis.
 
 
 ## Usage
