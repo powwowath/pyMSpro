@@ -12,12 +12,14 @@ Welcome to the repository for my Master Thesis in Biomedical Data Science. This 
 
 The following datasets were analyzed in this project:
 
-| Study | Type* | Method* |
-|-------|-------|---------|
-| [Iwata, H., et al. (2016)](https://www.nature.com/articles/ncomms12849) | Bulk | DDA |
-| [Li, P., et al. (2022)](https://link.springer.com/article/10.1631/jzus.B2100930) | Bulk | DDA |
-| [Li, P., et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34267761/) | Bulk | DDA |
-| [Huffman, R. G., et al. (2022)](https://www.nature.com/articles/s41592-023-01830-1) | Single Cell | DIA |
+| Study | Type | Method* |
+|-------|-------|----------|
+| [Iwata, H., et al. (2016)](https://www.nature.com/articles/ncomms12849) | Bulk | DDA      |
+| [Li, P., et al. (2022)](https://link.springer.com/article/10.1631/jzus.B2100930) | Bulk | DDA      |
+| [Li, P., et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34267761/) | Bulk | DDA      |
+| [Huffman, R. G., et al. (2022)](https://www.nature.com/articles/s41592-023-01830-1) | Single Cell | DIA      |
+
+**Method: DDA (Data-Dependent Acquisition) or DIA (Data-Independent Acquisition)*
 
 ## Project Structure
 
@@ -26,6 +28,7 @@ The repository is structured as follows:
 - **/src**: Contains custom Python tools and modules developed for data analysis.
 - **/notebooks**: Jupyter Notebooks with the data analysis and visualizations.
 - **/data**: Processed data files used in the analysis (not included due to size; see below for details on accessing raw data).
+
 
 ## Usage
 
@@ -51,6 +54,5 @@ For any questions or further information, please contact me at [gerard.font@estu
 
 ---
 
-*Type: Bulk or Single Cell
-*Method: DDA (Data-Dependent Acquisition) or DIA (Data-Independent Acquisition)
+
 
