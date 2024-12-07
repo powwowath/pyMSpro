@@ -1,85 +1,56 @@
 # pyMSpro
+### Proteomics Mass Spectrometry based Data Analysis 
 
-**Proteomics pipeline**
-* Peptide Identification
-* Protein inference
-* Protein Quantification
-* Data Normalization
-* Imputation
-* Batch correction
-* Statistical Analysis *<----------------- Current focus*
-* Enrichment Analysis
-* Protein-Protein Interaction Analysis
-* Pseudotime Analysis
-* Visualization
+Welcome to the repository for my Master Thesis in Biomedical Data Science. This repository hosts the code, tools, and data analysis performed as part of my thesis work. The project focuses on the analysis of MS proteomic data from various studies.
 
+## Contents
 
+- **Python Modules**: Custom mdules developed to assist with data analysis.
+- **Data Analysis Notebook**: Jupyter Notebook with detailed data analysis of the datasets listed below.
 
+## Datasets
 
-### TODO
- * Taula comparativa (per estudi)
- * Use protein names from Uniprot
- * PCA per cell cycle phase / cell type
- * Plot amb el número de proteines que ens quedariem en funció del % de missing values que permetem
- * Functional enrichement analysis (STringDB) -> Fold change (average per celltype) vs. p-value
+The following datasets were analyzed in this project:
 
+| Study | Type* | Method* |
+|-------|-------|---------|
+| [Iwata, H., et al. (2016)](https://www.nature.com/articles/ncomms12849) | Bulk | DDA |
+| [Li, P., et al. (2022)](https://link.springer.com/article/10.1631/jzus.B2100930) | Bulk | DDA |
+| [Li, P., et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34267761/) | Bulk | DDA |
+| [Huffman, R. G., et al. (2022)](https://www.nature.com/articles/s41592-023-01830-1) | Single Cell | DIA |
 
+## Project Structure
 
+The repository is structured as follows:
 
-### CONSIDERATIONS
-**Bioinformatic analysis**
-Principal component analysis (PCA) and hierarchical clustering analysis were performed using the "gmodels" and "heatmap" package in R language, respectively. The Database for Annotation, Visualization, and Integrated Discovery (DAVID) V6.8 (https://david.‍ncifcrf.‍gov/home.‍jsp) was used to perform Gene Ontology (GO) with Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway analyses by whole genome as background (Dennis et al., 2003). Reactome pathway analysis was performed using ClueGO plug-in and Cluepedia from Cytoscape (Bindea et al., 2009). Protein-protein interaction (PPI) network analysis was performed using Search Tool for the Retrieval of Interacting Genes/Proteins (STRING; https://string-db.‍org) (Szklarczyk et al., 2015), and interactions with a combined score of >0.15 were selected to construct the PPI networks using Cytoscape (Snel et al., 2000). The highly interactive modules were constructed with Molecular Complex Detection (MCODE) in Cytoscape (Bader and Hogue, 2003).
+- **/src**: Contains custom Python tools and modules developed for data analysis.
+- **/notebooks**: Jupyter Notebooks with the data analysis and visualizations.
+- **/data**: Processed data files used in the analysis (not included due to size; see below for details on accessing raw data).
 
+## Usage
 
+To use the tools and run the analysis, follow these steps:
 
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/powwowath/pyMSpro.git
+    cd pyMSpro
+    ```
 
+2. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+3. **Run the analysis**:
+    Open the Notebook "00_workflow_META-ANALYSIS.ipynb" and follow the instructions to perform the analysis.
 
+## Contact
 
+For any questions or further information, please contact me at [gerard.font@estudiants.urv.cat].
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ---
 
-Main GIT commands:
+*Type: Bulk or Single Cell
+*Method: DDA (Data-Dependent Acquisition) or DIA (Data-Independent Acquisition)
 
-  _**git add [file]**_  to add files to the staging area.
-
-    example: git add .
-
-  _**git commit**_  to create a new commit from changes added to the staging area.
-
-    example: git commit -m "Added SQL Query to retrieve patients information"
-
-  _**git branch [new_branch]**_  to create a new branch
-
-    example: git branch notes_analysis
-
-  _**git branch**_  to list existing local branches
-
-    example: git branch notes_analysis
-
-  _**git checkout [-b][branch_name]**_  to switch working directory to the specified branch (with -b: git will create the specified branch if it doesn't exist)
-
-    example: git checkout -b microbiologic_analysis
-
-  _**git pull [remote]**_  to fetch changes from the remote and merge current branch with its upstream
-
-    example: git pull origin
-
-  _**git push [--tags] [remote] [branch]**_ to push local branch to remote repository
-
-    example: git push origin notes_analysis
