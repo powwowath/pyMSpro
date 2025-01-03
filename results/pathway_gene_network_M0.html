@@ -969,18 +969,6 @@ var tomSelect=function(e,t){return new TomSelect(e,t)}
                             >
                                 <option selected>Select a Node by ID</option>
                                 
-                                    <option value="Reactome_2022__Ion Channel Transport R-HSA-983712">Reactome_2022__Ion Channel Transport R-HSA-983712</option>
-                                
-                                    <option value="ATP6V1B2">ATP6V1B2</option>
-                                
-                                    <option value="ATP6V1E1">ATP6V1E1</option>
-                                
-                                    <option value="ATP6V1G1">ATP6V1G1</option>
-                                
-                                    <option value="ATP6V1C1">ATP6V1C1</option>
-                                
-                                    <option value="ATP6V1A">ATP6V1A</option>
-                                
                             </select>
                         </div>
                         <div class="col-2 pb-2">
@@ -1033,8 +1021,8 @@ var tomSelect=function(e,t){return new TomSelect(e,t)}
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "skyblue", "font": {"color": "black"}, "id": "Reactome_2022__Ion Channel Transport R-HSA-983712", "label": "Ion Channel Transport R-HSA-983712", "shape": "dot", "size": 30}, {"color": "lightgreen", "font": {"color": "black"}, "id": "ATP6V1B2", "label": "ATP6V1B2", "shape": "dot", "size": 15}, {"color": "lightgreen", "font": {"color": "black"}, "id": "ATP6V1E1", "label": "ATP6V1E1", "shape": "dot", "size": 15}, {"color": "lightgreen", "font": {"color": "black"}, "id": "ATP6V1G1", "label": "ATP6V1G1", "shape": "dot", "size": 15}, {"color": "lightgreen", "font": {"color": "black"}, "id": "ATP6V1C1", "label": "ATP6V1C1", "shape": "dot", "size": 15}, {"color": "lightgreen", "font": {"color": "black"}, "id": "ATP6V1A", "label": "ATP6V1A", "shape": "dot", "size": 15}]);
-                  edges = new vis.DataSet([{"color": "gray", "from": "Reactome_2022__Ion Channel Transport R-HSA-983712", "to": "ATP6V1B2"}, {"color": "gray", "from": "Reactome_2022__Ion Channel Transport R-HSA-983712", "to": "ATP6V1E1"}, {"color": "gray", "from": "Reactome_2022__Ion Channel Transport R-HSA-983712", "to": "ATP6V1G1"}, {"color": "gray", "from": "Reactome_2022__Ion Channel Transport R-HSA-983712", "to": "ATP6V1C1"}, {"color": "gray", "from": "Reactome_2022__Ion Channel Transport R-HSA-983712", "to": "ATP6V1A"}]);
+                  nodes = new vis.DataSet([]);
+                  edges = new vis.DataSet([]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
