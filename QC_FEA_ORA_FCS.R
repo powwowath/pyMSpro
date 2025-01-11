@@ -22,7 +22,6 @@ rankM0 <- read.csv("/Users/gerardfont/Documents/Gerard/Master_BiomedicalDataScie
 # Use the en
 mart_mouse <- useMart("ensembl", dataset = "mmusculus_gene_ensembl")
 
-
 # -- ORA -----------------------------------------------------------------------------------------------------------------------
 
 # Retrieve the gene symbols from deM0$Gene

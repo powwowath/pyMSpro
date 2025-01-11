@@ -40,9 +40,12 @@ entrez_ids <- rbind(
 # Merge the Entrez IDs with the original deM0 data frame
 deM0 <- merge(deM0, entrez_ids, by.x = "Gene", by.y = "Gene", all.x = TRUE)
 
+# remove NA values
+deM0 <- deM0[!is.na(deM0$EntrezID),]
 
 # Get the enriched terms with ORA
-edo <- enrichDGN(deM0$EntrezID, organism="mmusculus")
+#edo <- enrichDGN(deM0$EntrezID, organism="mmusculus")
+edo <- enrichDGN(deM0$EntrezID)
 barplot(edo, showCategory=20) 
 
 # Get the enriched terms with GSEA
