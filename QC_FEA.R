@@ -5,6 +5,7 @@ if (!requireNamespace("biomaRt", quietly = TRUE)) {
 library(biomaRt)
 library(enrichplot)
 
+# Load the data (please adapt to your own path)
 # load /Users/gerardfont/Documents/Gerard/Master_BiomedicalDataScience/00_Master_THESIS/code/pyMSpro/results/DEG_M0.csv (separator is tab)
 deM0 <- read.csv("/Users/gerardfont/Documents/Gerard/Master_BiomedicalDataScience/00_Master_THESIS/code/pyMSpro/results/DEG_M0.csv", sep="\t", header=TRUE)
 

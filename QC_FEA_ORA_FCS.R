@@ -13,10 +13,10 @@ if (!requireNamespace("org.Mm.eg.db", quietly = TRUE)) {
 library(org.Mm.eg.db)
 
 
-# Load the DEG data
+# Load the DEG data (please adapt to your own path)
 deM0 <- read.csv("/Users/gerardfont/Documents/Gerard/Master_BiomedicalDataScience/00_Master_THESIS/code/pyMSpro/results/DEG_M0.csv", sep="\t", header=TRUE)
 
-# Load the ranked list data
+# Load the ranked list data (please adapt to your own path)
 rankM0 <- read.csv("/Users/gerardfont/Documents/Gerard/Master_BiomedicalDataScience/00_Master_THESIS/code/pyMSpro/results/Rank_M0_M1.csv", sep="\t", header=TRUE)
 
 # Use the en
