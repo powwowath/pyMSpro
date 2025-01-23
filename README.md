@@ -50,7 +50,7 @@ To use the tools and run the analysis, follow these steps:
 
 ## Contact
 
-For any questions or further information, please contact me at [gerard.font@estudiants.urv.cat].
+For any questions or further information, please contact me at [gerard.font@estudiants.urv.cat] or [ath@athzone.com].
 
 ---
 
