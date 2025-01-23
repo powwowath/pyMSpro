@@ -28,7 +28,7 @@ The repository is structured as follows:
 - **/src**: Contains custom Python tools and modules developed for data analysis.
 - **/results**: Generated HTML files with the results of the network analysis.
 - **/data**: Contains the datasets used in the analysis.
-- **/QC_* **: Quality Control files in R.
+- **/QC_*.R**: Quality Control files in R.
 
 
 ## Usage
